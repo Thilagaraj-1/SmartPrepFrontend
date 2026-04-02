@@ -8,6 +8,7 @@ import UploadQuestions from './pages/UploadQuestions';
 import QuestionsList from './pages/QuestionsList';
 import Quiz from './pages/Quiz';
 import Result from './pages/Result';
+import TopicQuiz from './pages/TopicQuiz';
 import './App.css';
 
 const PrivateRoute = ({ children }) => {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/questions" element={<PrivateRoute><QuestionsList /></PrivateRoute>} />
             <Route path="/quiz/:id" element={<PrivateRoute><Quiz /></PrivateRoute>} />
             <Route path="/result" element={<PrivateRoute><Result /></PrivateRoute>} />
+            <Route path="/topic-quiz" element={<PrivateRoute><TopicQuiz /></PrivateRoute>} />
             <Route path="/" element={<Navigate to="/dashboard" />} />
           </Routes>
         </main>

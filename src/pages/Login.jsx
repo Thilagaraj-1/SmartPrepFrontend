@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-import { BookOpen } from 'lucide-react';
+import logo from '../assets/smartprep_logo.png';
 
 const Login = () => {
     const { login, register } = useContext(AuthContext);
@@ -29,9 +29,9 @@ const Login = () => {
         <div className="container animate-fade-in" style={{ maxWidth: '500px', margin: '4rem auto' }}>
             <div className="card" style={{ textAlign: 'center' }}>
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.5rem' }}>
-                    <BookOpen color="var(--primary)" size={48} />
+                    <img src={logo} alt="SmartPrep AI" style={{ height: '80px', objectFit: 'contain', filter: 'drop-shadow(0 2px 8px rgba(79, 70, 229, 0.15))' }} />
                 </div>
-                <h1 style={{ marginBottom: '0.5rem' }}>Welcome to SmartPrep</h1>
+                <h1 style={{ marginBottom: '0.5rem' }}>Welcome to SmartPrep <sup style={{ fontSize: '0.5em', color: '#D97706' }}>AI</sup></h1>
                 <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>
                     {isLogin ? 'Log in to continue your preparation' : 'Create an account to start preparing'}
                 </p>
